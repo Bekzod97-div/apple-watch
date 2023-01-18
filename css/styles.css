@@ -6,8 +6,6 @@
 @font-face {
     font-family: "Roboto";
     font-style: normal;
-    font-size: 16px;
-    line-height: normal;
     font-weight: 400;
     font-display: swap;
     src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"),
@@ -41,6 +39,7 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
+    font-size: 16px;
     font-family: "Roboto", "Arial", sans-serif;
     background-color: #fff;
     color: #222;
@@ -293,10 +292,34 @@ h2 {
 
 /* Sport features */
 .sport-features {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
     background-image: url(../img/runners\ 1.jpg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     width: 100%;
     height: 100vh;
+}
+
+.sport-features-info {
+    display: block;
+    width: 100%;
+    max-width: 490px;
+    margin-left: 635px;
+    margin-top: 240px;
+    margin-bottom: 240px;
+}
+.sport-features-border {
+    border-left: 3px solid #fff;
+}
+
+.sport-features-heading, .sport-features-text {
+    color: #fff;
+}
+
+.sport-features-btn {
+    padding-left: 46px;
+    padding-right: 46px;
 }
