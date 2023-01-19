@@ -50,6 +50,11 @@ img {
     height: auto;
 }
 
+*:focus {
+    outline: 2px dashed var(--accent-color);
+    outline-offset: 3px;
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
@@ -63,14 +68,16 @@ img {
 .site-header {
     display: flex;
     padding-top: 30px;
+    padding-bottom: 30px;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 .logo-img {
     width: 35px;
     height: 41px;
     object-fit: contain;
+    transition: opacity 0.3s ease;
 }
 .logo-img:hover {
     opacity: 0.8;
@@ -102,11 +109,16 @@ img {
 
 .navbar-link {
     text-decoration: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid transparent;
     color: #333333;
+    transition: border-bottom 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .navbar-link:hover {
-    color: var(--accent-color);
+    border-bottom: 3px solid #333;
 }
 .navbar-link:active {
     opacity: 0.6;
@@ -118,6 +130,7 @@ img {
     background-color: inherit;
     color: #666;
     border: 0;
+    padding-top: 6px;
     padding-bottom: 6px;
     border-bottom: 1px solid #333333;
 }
@@ -136,17 +149,27 @@ h2 {
 
 /* Intro section styles */
 .intro {
+    width: 100%;
+    max-width: 1300px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 220px;
     border-bottom: 2px solid #ddd;
     margin-bottom: 68px;
+    background-image: url(../img/intro-bg.jpg);
+    background-position: left calc(50% + 550px) bottom;
+    background-repeat: no-repeat;
 }
 .intro-info {
     flex-grow: 1;
-    width: 331px;
-    margin-right: 245px;
+    width: 100%;
+    max-width: 490px;
+    padding-top: 90px;
+    padding-bottom: 180px;
 }
 /* Intro text wrapper */
 .intro-info-text-wrapper {
@@ -176,7 +199,14 @@ h2 {
     line-height: 27px;
     color: #fff;
     text-decoration: none;
-
+    transition: background-color 0.3s ease,
+    opacity 0.3s ease;
+}
+.main-btn:hover {
+    background-color: #db1b11;
+}
+.main-btn:active {
+    opacity: 0.6;
 }
 .intro-img-box {
     flex-grow: 1;
@@ -264,10 +294,12 @@ h2 {
     padding-left: 0;
     margin-bottom: 70px;
     border-bottom: 0;
+    background-image: unset;
 }
 .qualities-info {
-    width: 500px;
-    margin-right: 155px;
+    width: 100%;
+    max-width: 500px;
+    margin-right: 200px;
 }
 .qualities-btn {
     padding-left: 90px;
@@ -278,9 +310,9 @@ h2 {
     display: flex;
     justify-content: flex-end;
     object-fit: cover;
-    width: 400px;
+    width: 450px;
     height: 600px;
-    margin-right: 0;
+    margin-right: auto;
 }
 
 /* Sport features */
@@ -294,15 +326,16 @@ h2 {
     background-size: cover;
     width: 100%;
     height: 100vh;
+    padding-left: 635px;
+    padding-top: 240px;
+    padding-bottom: 240px;
 }
 
 .sport-features-info {
-    display: block;
+    display: inline-block;
     width: 100%;
     max-width: 490px;
-    margin-left: 635px;
-    margin-top: 240px;
-    margin-bottom: 240px;
+    padding: 0;
 }
 .sport-features-border {
     border-left: 3px solid #fff;
