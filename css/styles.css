@@ -113,20 +113,13 @@ img {
 }
 
 /* header button styles */
-.header-btn {
+.header-input {
     display: block;
     background-color: inherit;
     color: #666;
     border: 0;
     padding-bottom: 6px;
     border-bottom: 1px solid #333333;
-    cursor: pointer;
-}
-.header-btn:hover {
-    color: var(--accent-color);
-}
-.header-btn:active {
-    opacity: 0.6;
 }
 
 /* h2 global styles */
