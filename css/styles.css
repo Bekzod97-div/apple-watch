@@ -238,25 +238,20 @@ h2 {
     line-height: 27px;
     color: #222;
     margin-bottom: 30px;
+    text-transform: uppercase;
 }
 .features-list-text {
     font-size: 15px;
     line-height: 24px;
     color: #333333;
 }
-.rectanggle-list {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    list-style: none;
-    padding: 0;
-}
-.rectangle-item:not(:last-child) {
-    margin-right: 10px;
-}
-.rectangle-item > img {
-    display: flex;
-    object-fit: contain;
+.bottom-line {
+    width: 8px;
+    height: 8px;
+    background-color: #ddd;
+    margin-left: 0;
+    box-shadow: 16px 0 0 0 #ddd,
+    32px 0 0 0 #ddd;
 }
 
 /* Learn more styles */
@@ -265,29 +260,30 @@ h2 {
     justify-content: flex-start;
     align-items: center;
 }
-.learn-more-line {
-    width: 40px;
-    height: 3px;
-    border: 0;
-    background-color: var(--accent-color);
-    margin: 0;
-    margin-right: 10px;
-}
+
 .learn-more {
+    display: inline-flex;
+    align-items: center;
     border: 0;
     background-color: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 26px;
     color: var(--accent-color);
+    cursor: pointer;
 }
-.learn-more:hover {
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 3px;
+.learn-more::before {
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin-right: 10px;
+    content: "";
+    transition: width 0.3s ease;
 }
-.learn-more:active {
-    opacity: 0.6;
+.learn-more:hover::before {
+    width: 60px;
 }
+
 
 /* Qualities styles */
 .qualities {
